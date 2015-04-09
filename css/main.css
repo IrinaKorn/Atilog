@@ -297,6 +297,7 @@ li{
     position: fixed;
     top: 0;
     margin: auto; 
+    z-index: 999;
 }
 
 .main-menu .container{
@@ -374,7 +375,7 @@ li{
     padding-left: 17px;
     text-align: left;
 }
-/*******************HOVER and ACTIVE*******************/
+/*******************ACTIVE*******************/
 .portfolio-main-text-block:active {
     background: url(../img/1.jpg) 50% 50% no-repeat;
 }
@@ -382,40 +383,13 @@ li{
     opacity: 0;
 }
 .portfolio-foto1:active {
-    background: url(../img/2.jpg) 15% 15% no-repeat;
+    background: url(//lorempixel.com/250/250/city) no-repeat;
 }
 .text-block2 p.same2:active { 
      opacity: 0; 
 }
 
-.same-hover1:hover {
-    background: url(../img/3-1.jpg) 20% 20% no-repeat;
-}
-.same-hover2:hover {
-    background: url(../img/4.jpg) 20% 20% no-repeat;
-}
-.same-hover3:hover {
-    background: url(../img/5.jpg) 20% 20% no-repeat;
-}
-.same-hover4:hover {
-    background: url(../img/6.jpg) 20% 20% no-repeat;
-}
-.same-hover5:hover {
-    background: url(../img/7.jpg) 20% 20% no-repeat;
-}
-.same-hover6:hover {
-    background: url(../img/8.jpg) 20% 20% no-repeat;
-}
-.same-hover7:hover {
-    background: url(../img/9.jpg) 20% 20% no-repeat;
-}
-.same-hover8:hover {
-    background: url(../img/10.jpg) 20% 20% no-repeat;
-}
-.same-hover9:hover {
-    background: url(../img/11.jpg) 20% 20% no-repeat;
-}
-/*******************END HOVER and ACTIVE****************/
+/*******************END ACTIVE****************/
 .text-block h2 {
     font-family: 'Arial Narrow', sans-serif;
     color:  #ffffff;
@@ -438,7 +412,7 @@ li{
     height: 246px;
     display:inline-block;
     background-color:  #ffffff;
-    margin-left: 12px;
+    margin-left: 11px;
     margin-bottom: 10px;
 }
 .text-block2 {
@@ -466,6 +440,8 @@ li{
 .portfolio-foto-same {
     width: 249px;
     height: 122px;
+    overflow: hidden;
+    position: relative;
     display:inline-block;
     background-color:  #ffffff;
     margin-bottom: 10px;
@@ -478,10 +454,23 @@ li{
 
 /*********Same foto text***********/
 .text-block3 {
-    width: 211px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
     padding-left: 15px;
-    text-align: left;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
+.portfolio-foto-same:hover .text-block3{
+    background-color: transparent;
+    color: #fff;
+}
+
 .text-block3 p.same1 {
     font-family: 'Arial', sans-serif;
     color:  #d1751a;
@@ -516,7 +505,7 @@ li{
     float: left;
 }
 .line2 {
-    width: 500px;
+    width: 505px;
     border-top: 3px solid #fff;
     display: inline-block;
     margin: 44px 0 0 58px; 
@@ -529,7 +518,7 @@ li{
 .footer-contact {
     width: 485px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     margin-right: 29px;
     float: left;
 }
@@ -576,11 +565,11 @@ textarea {
     height: 64px;
 }
 .butt {
+    width: 71px;
+    height: 18px;
     background-color:  #f7671d;
     border: 1px solid #f7671d;
     border-radius: 4px / 3px;
-    width: 71px;
-    height: 18px;
     -moz-border-radius: 4px / 3px;
     -webkit-border-radius: 4px / 3px;
     float: right;
@@ -588,6 +577,7 @@ textarea {
     color:  #ffffff;
     font-size: 12px;
     font-weight: 400;
+    margin-top: 2px;
 }
 
 
@@ -610,21 +600,37 @@ textarea {
     margin-top: 28px;
     margin-left: 57px;
 }
+/*************Мы в соцсетях*********/
 ul.icons-social {
     padding: 0;
     width: 120px;
     height: 37px;
 }
-.icons-social li {
-  margin-top: 0;
-  margin-left: 0;
-  padding-right: 10px;
-  display: inline-block;
-  float: left;
+.icons-social li>a {
+    margin-top: 0;
+    margin-left: 0;
+    padding-right: 10px;
+    display: inline-block;
+    float: left;
 }
+.icons-social li a.vk {
+    width: 27px;
+    height: 27px;
+    background: url(../img/Vk.png) no-repeat;
+} 
+.icons-social li a.fb {
+    width: 27px;
+    height: 27px;
+    background: url(../img/fb.png) no-repeat;
+}
+.icons-social li a.lincedin {
+    width: 27px;
+    height: 27px;
+    background: url(../img/lincedin.png) no-repeat;
+}
+/***********Контактная информация*****/
 .social-icon2 {
     width: 290px;
-    height: 182px;
     text-align: left;
 }
 .line5 {
@@ -644,6 +650,7 @@ ul.icons-social {
 }
 
 ul.contact-right {
+    width: 300px;
     float: left; 
     padding: 0;
     margin: 0;
@@ -651,7 +658,7 @@ ul.contact-right {
 .contact-right li{
     margin-top: 0;
     margin-left: 0;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
 }
 .contact-right a {
     font-family: 'Myriad Pro', sans-serif;
@@ -659,7 +666,30 @@ ul.contact-right {
     font-size: 14px;
     font-weight: 400;
 }
-
+.contact-right li a.people {
+    width: 27px;
+    height: 26px;
+    background: url(../img/people.png) no-repeat;
+    padding: 8px 36px;
+}
+.contact-right li a.phone {
+    width: 27px;
+    height: 26px;
+    background: url(../img/phone.png) no-repeat;
+    padding: 8px 36px;
+}
+.contact-right li a.address {
+    width: 27px;
+    height: 26px;
+    background: url(../img/address.png) no-repeat;
+    padding: 8px 0px 6px 36px;
+}
+.contact-right li a.email {
+    width: 27px;
+    height: 26px;
+    background: url(../img/email.png) no-repeat;
+    padding: 8px 36px;
+} 
 /***********NAVIGATION LEFT***************/
 #scroller {
     position: fixed;
