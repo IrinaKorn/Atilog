@@ -1,0 +1,5 @@
+$(function(){
+ 
+alert('jQuery работает');
+ 
+});

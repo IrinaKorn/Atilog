@@ -1,0 +1,700 @@
+/*! HTML5 Boilerplate v5.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@font-face {
+    font-family: "Arial Narrow";  
+    src: url(../fonts/ARIALN.TTF); 
+}
+body {
+    background-color: #cccccc;
+    font-family: 'Arial', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+}  
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+/*------------------------------------*\
+    #SECTION-HEADER
+\*------------------------------------*/
+.main-menu {
+    width: 1024px;
+    height: 65px;
+    background-color: #2d2d2d;
+    position: fixed;
+    top: 0;
+    margin: auto; 
+}
+
+.main-menu .container{
+    overflow: hidden;
+    height: 65px;
+}
+.menu {
+    margin-left: 127px;
+    padding: 33px 0 9px;
+}
+.menu>a {
+    font-family: Arial;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 8.268px;
+    text-align: center;
+    padding-right: 26px;
+}
+/*------------------------------------*\
+    #SECTION-LOGO-FON
+\*------------------------------------*/
+.atilog-fon {
+    width: 1024px;
+    height: 464px;
+    background: url(../img/atilog.jpg);
+    margin-top: 65px;
+}
+/*------------------------------------*\
+    #SECTION-PORTFOLIO
+\*------------------------------------*/
+.portfolio {
+    height: 868px;
+    border-top: 1px solid #97d1c6;
+    background-color: #63baa9;
+}
+.portfolio-block {
+    width: 777px;
+    text-align: left;
+    margin: 26px 127px;
+}
+
+.portfolio-text-h2 {
+    margin-bottom: 71px;
+}
+.portfolio-block h2 {
+    font-family: 'Myriad Pro', sans-serif;
+    color:  #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    float:left;
+}
+.line {
+    width: 562px;
+    border-top: 3px solid #fff;
+    display: inline-block;
+    margin: 46px 0 0 40px;
+}
+
+/*
+*****PORTFOLIO BLOCKS
+*/
+.portfolio-main-text-block{
+    width: 509px;
+    height: 246px;
+    display:inline-block;
+    background-color:  #f7671d;
+    margin-bottom: 10px;
+}
+
+.text-block {
+    width: 460px;
+    height: 185px;
+    padding-top: 22px;
+    padding-left: 17px;
+    text-align: left;
+}
+/*******************HOVER and ACTIVE*******************/
+.portfolio-main-text-block:active {
+    background: url(../img/1.jpg) 50% 50% no-repeat;
+}
+.text-block p:active {
+    opacity: 0;
+}
+.portfolio-foto1:active {
+    background: url(../img/2.jpg) 15% 15% no-repeat;
+}
+.text-block2 p.same2:active { 
+     opacity: 0; 
+}
+
+.same-hover1:hover {
+    background: url(../img/3-1.jpg) 20% 20% no-repeat;
+}
+.same-hover2:hover {
+    background: url(../img/4.jpg) 20% 20% no-repeat;
+}
+.same-hover3:hover {
+    background: url(../img/5.jpg) 20% 20% no-repeat;
+}
+.same-hover4:hover {
+    background: url(../img/6.jpg) 20% 20% no-repeat;
+}
+.same-hover5:hover {
+    background: url(../img/7.jpg) 20% 20% no-repeat;
+}
+.same-hover6:hover {
+    background: url(../img/8.jpg) 20% 20% no-repeat;
+}
+.same-hover7:hover {
+    background: url(../img/9.jpg) 20% 20% no-repeat;
+}
+.same-hover8:hover {
+    background: url(../img/10.jpg) 20% 20% no-repeat;
+}
+.same-hover9:hover {
+    background: url(../img/11.jpg) 20% 20% no-repeat;
+}
+/*******************END HOVER and ACTIVE****************/
+.text-block h2 {
+    font-family: 'Arial Narrow', sans-serif;
+    color:  #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px; 
+    text-transform: uppercase;
+} 
+.text-block p {
+    font-family: 'Arial Narrow', sans-serif;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+
+.portfolio-foto1 {
+    width: 250px;
+    height: 246px;
+    display:inline-block;
+    background-color:  #ffffff;
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+.text-block2 {
+    width: 211px;
+    padding-top: 140px;
+    padding-left: 15px;
+    text-align: left;
+}
+.text-block2 p.same {
+    font-family: 'Arial', sans-serif;
+    color:  #d1751a;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 36px;
+}
+.portfolio-foto1 p {
+    font-family: 'Arial', sans-serif;
+    color:  #4e4d4d;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: -25px;
+}
+
+/*********Same foto***************/
+.portfolio-foto-same {
+    width: 249px;
+    height: 122px;
+    display:inline-block;
+    background-color:  #ffffff;
+    margin-bottom: 10px;
+}
+.center {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+
+/*********Same foto text***********/
+.text-block3 {
+    width: 211px;
+    padding-left: 15px;
+    text-align: left;
+}
+.text-block3 p.same1 {
+    font-family: 'Arial', sans-serif;
+    color:  #d1751a;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 50px;
+}
+.portfolio-foto-same p {
+    font-family: 'Arial', sans-serif;
+    color:  #4e4d4d;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: -21px;
+}
+/*------------------------------------*\
+    #SECTION-FOOTER
+\*------------------------------------*/
+
+.footer {
+    background: url(../img/noyt.png) 100% -12% no-repeat #303646;
+}
+.footer-block {
+    width: 804px;
+    text-align: left;
+    margin: 65px 100px 11px 125px;
+}
+.footer h2 {
+    font-family: 'Myriad Pro', sans-serif;
+    color:  #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    float: left;
+}
+.line2 {
+    width: 500px;
+    border-top: 3px solid #fff;
+    display: inline-block;
+    margin: 44px 0 0 58px; 
+}
+
+/************FORM*****************/
+.footer-main-text {
+    margin-bottom: 46px;
+}
+.footer-contact {
+    width: 485px;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 29px;
+    float: left;
+}
+.contact-form {
+    width: 485px;
+    text-align: left;
+}
+.contact-form h4 {
+    font-family: 'Myriad Pro', sans-serif;
+    color:  #d1751a;
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+}
+.line3 {
+    width: 361px;
+    border-top: 1px solid #4e4d4d;
+    display: inline-block;
+    margin-top: 28px;
+    margin-left: 31px;
+}
+label {
+    font-family: 'Myriad Pro', sans-serif;
+    color:  #868686;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    padding-top: 6px;
+}
+form {
+    width: 461px;
+    margin-top: 27px;
+}
+input {
+    background-color:  #ffffff;
+    width: 228px;
+    height: 20px;
+}
+textarea {
+    background-color:  #ffffff;
+    width: 454px;
+    height: 64px;
+}
+.butt {
+    background-color:  #f7671d;
+    border: 1px solid #f7671d;
+    border-radius: 4px / 3px;
+    width: 71px;
+    height: 18px;
+    -moz-border-radius: 4px / 3px;
+    -webkit-border-radius: 4px / 3px;
+    float: right;
+    font-family: 'Myriad Pro', sans-serif;
+    color:  #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+/**********Footer Contact************/
+.footer-contact2 {
+    width: 285px;
+    height: 242px; 
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.social-icon {
+    width: 283px;
+    height: 81px; 
+    text-align: left;
+}
+.line4 {
+    width: 130px;
+    border-top: 1px solid #4e4d4d;
+    display: inline-block;
+    margin-top: 28px;
+    margin-left: 57px;
+}
+ul.icons-social {
+    padding: 0;
+    width: 120px;
+    height: 37px;
+}
+.icons-social li {
+  margin-top: 0;
+  margin-left: 0;
+  padding-right: 10px;
+  display: inline-block;
+  float: left;
+}
+.social-icon2 {
+    width: 290px;
+    height: 182px;
+    text-align: left;
+}
+.line5 {
+    width: 72px;
+    border-top: 1px solid #4e4d4d;
+    display: inline-block;
+    margin-top: 28px;
+    margin-left: 47px;
+}
+.social-icon h4, 
+.social-icon2 h4 {
+    font-family: 'Myriad Pro', sans-serif;
+    color:  #000000;
+    font-size: 14px;
+    font-weight: 400;
+    float: left;
+}
+
+ul.contact-right {
+    float: left; 
+    padding: 0;
+    margin: 0;
+}
+.contact-right li{
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 3px;
+}
+.contact-right a {
+    font-family: 'Myriad Pro', sans-serif;
+    color:  #4e4d4d;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/***********NAVIGATION LEFT***************/
+#scroller {
+    position: fixed;
+    top:200px;
+    width:16px;
+    left:20px;
+}
+
+#scroller .scroll-point {
+    background: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+#scroller .scroll-point.active {
+    background: red;
+}
+/*******pop-up button to scroll**********/
+#ex3 {
+    width: 150px;
+    height: 70px;
+    line-height: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+#ex3:hover {
+    line-height: 20px;
+    color: #333844;
+    border: 3px dotted #ccc;
+    padding-left: 15px;
+}
+a.scroll-a {
+  cursor: pointer;
+}
